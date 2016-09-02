@@ -1,0 +1,55 @@
+/*----------------------------
+ test
+----------------------------*/
+
+body{
+  margin: 0;
+  padding: 0;
+    background:#f33;
+}
+
+
+/*----------------------------
+ general
+----------------------------*/
+header h1{
+    font-family: DIN;
+    font-size: 22px;
+    line-height: 1em;
+    width:100%;
+    height:24px;
+    margin: 0;
+    padding: 20px 0 0 20px;    
+    background-color: #000;
+    color:#fff;
+    text-align: left;  
+    border-bottom: solid 1px #fff;
+    z-index: 100;
+}
+
+#mapArea{
+    width: 640px;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+#pinBtn{
+    display: inherit;
+    background-color:  #f33;
+    margin: 180px auto 0;
+    border:0;
+    
+}
+
+#pinBtn:focus {
+    outline: none;
+}
+
+
+#map{
+    position: absolute;
+width: 640px;
+height: 500px;
+margin: 100px auto;
+}
