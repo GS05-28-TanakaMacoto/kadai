@@ -30,3 +30,10 @@ SELECT * FROM gs_bm_table ORDER BY id DESC LIMIT 5;
 
 
 7. （難問題） "書籍名"に”PHP”の⽂字が含まれる「総数」を取得するSQLを作る
+
+SELECT COUNT(*) AS PHPの文字列を含む本の数 FROM gs_bm_table WHERE name LIKE '%PHP%';
+
+  -- 全レコード表示
+  -- SELECT COUNT(*) AS 全レコード FROM gs_bm_table;
+  -- PHP本の総数
+  -- SELECT * FROM gs_bm_table WHERE name LIKE '%PHP%'
