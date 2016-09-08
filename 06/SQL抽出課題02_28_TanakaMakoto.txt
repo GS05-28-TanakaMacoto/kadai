@@ -1,0 +1,29 @@
+////////////////////////////////////////////
+SQL抽出課題02.txt
+////////////////////////////////////////////
+
+１. UPDATEを使って"ユニーク値" 「7」の書籍名を”RB”に変更するSQLを作る
+UPDATE gs_bm_table SET name = 'RB' WHERE id = 7;
+
+２. UPDATEを使って"ユニーク値" 「3,9」の書籍名を”PY”に変更するSQLを作る
+UPDATE gs_bm_table SET name = 'PY' WHERE id=3 OR id = 9;
+
+  -- xANDは'かつ'なので間違っている
+
+３. UPDATEを使って"ユニーク値"「６〜8」の登録⽇時を現在時刻に変更するSQLを作る
+UPDATE gs_bm_table SET indate = CURRENT_TIMESTAMP WHERE id >= 6 AND id <= 8;
+
+  -- 現在のタイムスタンプ取得（どれも同じ http://mysql.javarou.com/dat/000848.html）
+  -- SELECT NOW();
+  -- SELECT CURRENT_TIMESTAMP();
+  -- SELECT CURRENT_TIMESTAMP;
+
+
+４. UPDATEを使って"書籍名"「JS本」を書籍名「PHP&JS」に変更するSQLを作る
+UPDATE gs_bm_table SET name = 'PHP&JS' WHERE name = 'JS本';
+
+
+５. UPDATEを使って”書籍コメント”が⼊って無いレコードがあれば、”書籍コメントに”に「未⼊⼒」と変更するSQLを作る。
+UPDATE gs_bm_table SET comment = '未入力' WHERE comment = '';
+
+  -- NULL = 何もない　'' = 空文字

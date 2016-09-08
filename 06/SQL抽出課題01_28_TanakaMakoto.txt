@@ -1,0 +1,32 @@
+////////////////////////////////////////////
+SQL抽出課題01.txt
+////////////////////////////////////////////
+
+1. SELECT⽂を使って、"ユニーク値" 「1,3,5」だけ抽出するSQLを作る
+SELECT * FROM gs_bm_table WHERE id = 1 OR id = 3 OR id = 5;
+
+
+2. SELECT⽂を使って、"ユニーク値" 「4～8」を抽出するSQLを作る
+SELECT * FROM gs_bm_table WHERE id >= 4 AND id <= 8;
+
+
+3. SELECT⽂を使って、"書籍名"「PHP本」を抽出する”あいまい検索”を⽂を作る
+SELECT * FROM gs_bm_table WHERE name LIKE '%PHP%'
+
+
+4. SELECT⽂を使って、”登録⽇時”が"新しい⽇付順"にソートするSQLを作る。
+SELECT * FROM gs_bm_table ORDER BY id DESC;
+
+
+5. SELECT⽂を使って、"登録⽇時"が現在”⽉”データのみを抽出するSQLを作る
+SELECT * FROM gs_bm_table WHERE  MONTH(now()) = MONTH( indate );
+
+  -- 当月を表示  SELECT MONTH(NOW())
+  -- 当月の名前を表示  SELECT MONTHNAME(NOW())
+
+
+6. SELECT⽂を使って、"新しい⽇付順"で、「5個」だけ取得するSQLを作る
+SELECT * FROM gs_bm_table ORDER BY id DESC LIMIT 5;
+
+
+7. （難問題） "書籍名"に”PHP”の⽂字が含まれる「総数」を取得するSQLを作る
